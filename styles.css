@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(to right top, white, rgb(247, 238, 223));
+}
+
+/*-----------Scrollbar Custom Starts------------- */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(0, 0, 0); 
+  border-radius: 8px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #605e5e; 
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: black; 
+}
+
+/*-----------------Scrollbar Custom Ends-----------*/
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.wrapper h1 {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 40px;
+  color: rgb(95, 93, 93);
+  color:black;
+  text-shadow: 0 0 30px rgb(56, 55, 55);
+}
+
+.card {
+  width: 32%;
+  overflow: hidden;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100%);
+  object-fit: cover;
+}
+
+#img6:hover{
+  filter: brightness(1.5);
+}
+
+.card:hover {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 10px #333);
+}
+
+.card:hover img {
+    filter: grayscale(0);
+}
+
+.card figcaption a:visited{
+  color: #fff;
+}
+
+.card figcaption{
+    position: absolute;
+    width: 100%;
+    height: 16%;
+    bottom: 0;
+    left:0;
+    opacity: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    color: #fff;
+    padding: 25px;
+    font-weight: 700;
+    font-size: 2px;
+    text-align: center;
+}
+
+.card:hover figcaption{
+    opacity: 1;
+    font-size: 18px;
+    transition: 0.5s;
+}
